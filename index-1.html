@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Scooby-Doo Movie Night Bingo</title>
+<style>:root{--navy:#082b49;--teal:#19a9a0;--purple:#6537a8;--yellow:#ffd447;--orange:#f59a27;--green:#45b85a;--cream:#fff8dc;--ink:#1d2430;--shadow:0 10px 30px rgba(4,26,43,.22)}*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(circle at 8% 12%,#ffd44733 0 18px,transparent 19px),radial-gradient(circle at 92% 22%,#19a9a033 0 15px,transparent 16px),linear-gradient(145deg,#061f36,#0b3653 48%,#174f63);overflow-x:hidden}.wrap{max-width:960px;margin:auto;padding:16px;position:relative}.hero{text-align:center;color:white;padding:6px 0 12px}.logo{display:inline-block;font-weight:1000;line-height:.9;font-size:clamp(34px,8vw,62px);color:var(--yellow);text-shadow:4px 4px 0 var(--purple),-2px -2px 0 var(--purple),0 8px 18px #0006}.logo small{display:block;font-size:clamp(13px,3vw,21px);letter-spacing:2px;color:white;text-shadow:2px 2px 0 #000;margin-top:9px}.tagline{margin:0;color:#e9ffff;font-weight:700}.card{background:linear-gradient(145deg,#fffdf1fa,#fff8dcfa);border:4px solid var(--teal);border-radius:24px;padding:18px;margin:14px 0;box-shadow:var(--shadow);position:relative;overflow:hidden}.card:before,.card:after{content:"✿";position:absolute;color:var(--orange);font-size:30px;opacity:.75}.card:before{top:4px;right:12px}.card:after{bottom:0;left:12px}h2,h3{color:var(--purple);margin-top:4px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}input,button{font:inherit;border-radius:14px;padding:13px 14px;border:2px solid #d8cda7}input{flex:1;min-width:180px;background:white}button{cursor:pointer;border:0;background:linear-gradient(#7f4bc0,#5b319d);color:white;font-weight:900;box-shadow:0 4px 0 #3e2370}button:active{transform:translateY(2px);box-shadow:0 2px 0 #3e2370}button.alt{background:#496476;box-shadow:0 4px 0 #304653}button.gold{background:linear-gradient(#ffda55,#edaa20);color:#4b3200;box-shadow:0 4px 0 #b47b0b}button.green{background:linear-gradient(#61c96b,#299c45);box-shadow:0 4px 0 #1c7331}.hidden{display:none}.status{padding:11px 13px;border-radius:14px;background:#e8f8f5;border:2px dashed #55bcb1;margin:10px 0;font-weight:650}.players{display:flex;gap:8px;flex-wrap:wrap}.pill{padding:7px 11px;border-radius:999px;background:#e6edf0;border:2px solid #ccd9df;font-weight:750}.host{background:#fff0b0;border-color:#e4b929}.code{font-size:clamp(30px,8vw,46px);letter-spacing:7px;font-weight:1000;color:var(--purple);background:#f3edff;padding:3px 10px;border-radius:12px;display:inline-block}.small{font-size:.9rem;color:#4e5961}.clue{font-size:clamp(1.05rem,3vw,1.45rem);font-weight:950;color:var(--purple);min-height:34px;padding:8px 12px;background:#fff;border-radius:14px;border-left:7px solid var(--yellow)}.section-title{display:flex;align-items:center;gap:9px}.board{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px;background:#124b61;padding:7px;border-radius:17px;border:3px solid #0a3045}.square{min-height:92px;background:var(--cream);border:3px solid #e3c967;border-radius:12px;padding:7px;font-size:clamp(9px,2.2vw,14px);font-weight:900;color:#253039;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.12;box-shadow:inset 0 0 0 2px #fff,0 2px 4px #0002}.square:nth-child(5n+1){border-color:#6bc9c0}.square:nth-child(5n+2){border-color:#b792e4}.square:nth-child(5n+3){border-color:#f2bf3c}.square:nth-child(5n+4){border-color:#e88bb8}.square:nth-child(5n+5){border-color:#72b9df}.square.marked{background:linear-gradient(145deg,#9ee8d9,#56c5b4);border-color:#147c73;color:#0b4e49;text-decoration:line-through;position:relative}.square.marked:after{content:"🐾";position:absolute;right:3px;bottom:1px;font-size:18px}.square.free{background:linear-gradient(145deg,#eee2ff,#d7c1fa);border-color:var(--purple);color:#4b2783}.bingo{font-size:clamp(1.3rem,5vw,2rem);font-weight:1000;color:#fff;text-align:center;margin:12px 0;padding:12px;border-radius:16px;background:linear-gradient(135deg,#6d35ad,#19a9a0);text-shadow:2px 2px 0 #3b2162;display:none}.bingo:not(:empty){display:block}.footer-note{text-align:center;color:#e6ffff;font-size:.82rem;margin:12px 0 20px}@media(max-width:520px){.wrap{padding:9px}.card{padding:13px;border-width:3px}.square{min-height:72px;padding:4px}.board{gap:4px;padding:5px}.logo{font-size:35px}.code{letter-spacing:4px}}</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero"><div class="logo">SCOOBY-DOO!<small>🐾 BINGO • MOVIE NIGHT EDITION 🕵️‍♀️</small></div><p class="tagline">Grab your snacks, gather the gang, and solve the mystery!</p></div>
+
+  <section id="start" class="card">
+    <div class="section-title"><span>🔎</span><h2>Join the Mystery!</h2></div>
+    <div class="row">
+      <input id="name" placeholder="Your name" maxlength="24">
+      <button onclick="createGame()">🚌 Create Game</button>
+    </div>
+    <div style="text-align:center;margin:10px">or</div>
+    <div class="row">
+      <input id="joinCode" placeholder="Room code" maxlength="6" style="text-transform:uppercase">
+      <button class="green" onclick="joinGame()">🔍 Join Game</button>
+    </div>
+    <div id="msg" class="status">Enter your name to begin.</div>
+  </section>
+
+  <section id="lobby" class="card hidden">
+    <div class="row" style="justify-content:space-between">
+      <div><div class="small">Room code</div><div id="roomCode" class="code"></div></div>
+      <button class="alt" onclick="leaveGame()">Leave</button>
+    </div>
+    <p class="small">Share this code with everyone playing.</p>
+    <div class="section-title"><span>👻</span><h3>Who's Solving the Mystery?</h3></div><div id="players" class="players"></div>
+    <div id="hostControls" class="hidden">
+      <hr><h3>🎬 Mystery Caller</h3>
+      <div id="currentClue" class="clue">Ready to call the first clue!</div>
+      <button class="green" onclick="nextClue()">🔔 Reveal Next Clue</button>
+      <button class="gold" onclick="resetRound()">🔄 New Mystery</button>
+      <p class="small">The clue appears on every player's screen. Players mark their own cards.</p>
+    </div>
+    <div id="waiting" class="status">Waiting for the host to call clues…</div>
+  </section>
+
+  <section id="game" class="card hidden">
+    <div class="row" style="justify-content:space-between">
+      <div><b id="playerLabel"></b><div class="small">Your mystery bingo card 🐾</div></div>
+      <div><b id="cardLabel"></b></div>
+    </div>
+    <div id="called" class="status"><b>Current clue:</b> <span id="clueText">Waiting…</span></div>
+    <div id="bingo" class="bingo"></div>
+    <div class="board" id="board"></div>
+    <div class="row" style="margin-top:12px">
+      <button class="alt" onclick="clearMarks()">🧹 Clear Marks</button>
+      <button class="green" onclick="checkBingo()">🎉 Check Bingo!</button>
+    </div>
+  </section>
+</div>
+
+<script>
+const SUPABASE_URL = "https://khnblvefcmtmnfupmjyj.supabase.co";
+const SUPABASE_KEY = "sb_publishable_mYRSstPxKhrAxNwajb10Ig_TbCYQ-0r";
+const headers = {"apikey":SUPABASE_KEY,"Authorization":"Bearer "+SUPABASE_KEY,"Content-Type":"application/json","Prefer":"return=representation"};
+let session=null, room=null, player=null, poll=null;
+
+const cards=[
+["THE GANG SPLITS UP","SOMEONE IS DISGUISED","“JINKIES!”","SCOOBY EATS A SNACK","CHASE SCENE","SHAGGY GETS SCARED","TRAP OR TRAPDOOR ACTIVATED","SOMEONE SAYS “LET’S SPLIT UP!”","SCARY NOISE","YOU SPOT A CLUE","VELMA LOSES HER GLASSES","MONSTER REVEALED","FREE SPACE","THE BAD GUY’S PLAN IS EXPLAINED","SCOOBY AND SHAGGY RUN AWAY","SOMEONE FALLS INTO SOMETHING","OLD MAN YELLS AT KIDS","THERE’S A SECRET PASSAGE","SCOOBY SAYS “RUH-ROH!”","FAKE GHOST OR MONSTER","MYSTERY MACHINE IN ACTION","SOMEONE CHECKS THE BOOK","TEAM HUG OR GROUP CELEBRATION","CASE SOLVED!","YOU MEDDLING KIDS!"],
+["SCOOBY SAYS “RUH-ROH!”","THE GANG SPLITS UP","TRAP OR TRAPDOOR ACTIVATED","CHASE SCENE","MONSTER REVEALED","SCOOBY EATS A SNACK","YOU SPOT A CLUE","SOMEONE IS DISGUISED","FREE SPACE","SCARY NOISE","THE BAD GUY’S PLAN IS EXPLAINED","SHAGGY GETS SCARED","MYSTERY MACHINE IN ACTION","VELMA LOSES HER GLASSES","“JINKIES!”","FAKE GHOST OR MONSTER","SOMEONE FALLS INTO SOMETHING","THERE’S A SECRET PASSAGE","OLD MAN YELLS AT KIDS","SCOOBY AND SHAGGY RUN AWAY","TEAM HUG OR GROUP CELEBRATION","SOMEONE CHECKS THE BOOK","SOMEONE SAYS “LET’S SPLIT UP!”","CASE SOLVED!","YOU MEDDLING KIDS!"],
+["SOMEONE SAYS “LET’S SPLIT UP!”","MONSTER REVEALED","CHASE SCENE","VELMA LOSES HER GLASSES","THE BAD GUY’S PLAN IS EXPLAINED","SCOOBY AND SHAGGY RUN AWAY","FREE SPACE","MYSTERY MACHINE IN ACTION","YOU SPOT A CLUE","FAKE GHOST OR MONSTER","TRAP OR TRAPDOOR ACTIVATED","OLD MAN YELLS AT KIDS","SCOOBY SAYS “RUH-ROH!”","SOMEONE FALLS INTO SOMETHING","“JINKIES!”","THE GANG SPLITS UP","SOMEONE IS DISGUISED","SCOOBY EATS A SNACK","TEAM HUG OR GROUP CELEBRATION","CASE SOLVED!","YOU MEDDLING KIDS!","SHAGGY GETS SCARED","THERE’S A SECRET PASSAGE","SOMEONE CHECKS THE BOOK","SCARY NOISE"],
+["SCOOBY SAYS “RUH-ROH!”","THE GANG SPLITS UP","TRAP OR TRAPDOOR ACTIVATED","CHASE SCENE","MONSTER REVEALED","SOMEONE IS DISGUISED","SCOOBY EATS A SNACK","THE BAD GUY’S PLAN IS EXPLAINED","FREE SPACE","YOU SPOT A CLUE","SCARY NOISE","SOMEONE FALLS INTO SOMETHING","MYSTERY MACHINE IN ACTION","“JINKIES!”","FAKE GHOST OR MONSTER","VELMA LOSES HER GLASSES","SOMEONE SAYS “LET’S SPLIT UP!”","OLD MAN YELLS AT KIDS","SCOOBY AND SHAGGY RUN AWAY","SHAGGY GETS SCARED","THERE’S A SECRET PASSAGE","TEAM HUG OR GROUP CELEBRATION","CASE SOLVED!","SOMEONE CHECKS THE BOOK","YOU MEDDLING KIDS!"]
+];
+const clues=[...new Set(cards.flat())].filter(x=>x!=="FREE SPACE");
+
+async function anon(){
+ if(session) return session;
+ const r=await fetch(SUPABASE_URL+"/auth/v1/signup",{method:"POST",headers:{"apikey":SUPABASE_KEY,"Content-Type":"application/json"},body:JSON.stringify({})});
+ const d=await r.json();
+ if(!r.ok) throw new Error(d.msg||d.message||"Anonymous sign-in failed");
+ session=d;
+ return session;
+}
+function authHeaders(){return {...headers,"Authorization":"Bearer "+session.access_token};}
+function code(){return Math.random().toString(36).slice(2,8).toUpperCase()}
+function setMsg(x){document.getElementById("msg").textContent=x}
+function show(id,on=true){document.getElementById(id).classList.toggle("hidden",!on)}
+
+async function createGame(){
+ try{
+  const name=document.getElementById("name").value.trim(); if(!name)return setMsg("Please enter your name.");
+  await anon();
+  let c, ok=false;
+  for(let i=0;i<10&&!ok;i++){c=code();let r=await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms",{method:"POST",headers:authHeaders(),body:JSON.stringify({room_code:c,host_id:session.user.id})});ok=r.ok}
+  if(!ok)throw new Error("Couldn't create a room.");
+  room=(await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?room_code=eq."+c+"&select=*",{headers:authHeaders()})).json?await (await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?room_code=eq."+c+"&select=*",{headers:authHeaders()})).json():null;
+  room=room[0];
+  await addPlayer(name,true);
+ }catch(e){setMsg(e.message)}
+}
+async function joinGame(){
+ try{
+  const name=document.getElementById("name").value.trim(), c=document.getElementById("joinCode").value.trim().toUpperCase();
+  if(!name||!c)return setMsg("Enter your name and room code.");
+  await anon();
+  const r=await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?room_code=eq."+encodeURIComponent(c)+"&select=*",{headers:authHeaders()});
+  const a=await r.json(); if(!a.length)throw new Error("Room not found.");
+  room=a[0]; await addPlayer(name,false);
+ }catch(e){setMsg(e.message)}
+}
+async function addPlayer(name,isHost){
+ const r=await fetch(SUPABASE_URL+"/rest/v1/bingo_players",{method:"POST",headers:authHeaders(),body:JSON.stringify({room_id:room.id,user_id:session.user.id,player_name:name,card_number:await nextCard(),is_host:isHost,marked_squares:Array(25).fill(false)})});
+ const a=await r.json(); if(!r.ok)throw new Error(a.message||a.hint||"Couldn't join the room.");
+ player=a[0]; localStorage.setItem("scoobyPlayer",JSON.stringify({room:room,player:player}));
+ document.getElementById("roomCode").textContent=room.room_code;
+ show("start",false);show("lobby",true);show("game",true);
+ renderBoard(); refresh(); if(poll)clearInterval(poll); poll=setInterval(refresh,1200);
+}
+async function nextCard(){
+ const r=await fetch(SUPABASE_URL+"/rest/v1/bingo_players?room_id=eq."+room.id+"&select=card_number",{headers:authHeaders()});
+ const a=await r.json(), used=a.map(x=>x.card_number); for(let n=1;n<=4;n++)if(!used.includes(n))return n;
+ throw new Error("All four cards are already taken.");
+}
+async function refresh(){
+ if(!room)return;
+ const rr=await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?id=eq."+room.id+"&select=*",{headers:authHeaders()});
+ const ra=await rr.json();if(ra.length)room=ra[0];
+ const pr=await fetch(SUPABASE_URL+"/rest/v1/bingo_players?room_id=eq."+room.id+"&select=*",{headers:authHeaders()});
+ const ps=await pr.json();
+ const me=ps.find(x=>x.user_id===session.user.id);if(me){player=me;renderBoard()}
+ document.getElementById("players").innerHTML=ps.map(p=>`<span class="pill ${p.is_host?'host':''}">${esc(p.player_name)}${p.is_host?' ⭐':''}</span>`).join("");
+ document.getElementById("hostControls").classList.toggle("hidden",!player?.is_host);
+ document.getElementById("waiting").classList.toggle("hidden",!!player?.is_host);
+ document.getElementById("currentClue").textContent=room.current_clue||"Ready to call the first clue!";
+ document.getElementById("clueText").textContent=room.current_clue||"Waiting…";
+ document.getElementById("playerLabel").textContent=player?.player_name||"";
+ document.getElementById("cardLabel").textContent=player?"Card "+player.card_number:"";
+}
+function renderBoard(){
+ if(!player)return;
+ const b=document.getElementById("board");b.innerHTML="";
+ cards[player.card_number-1].forEach((x,i)=>{
+  const d=document.createElement("button");d.className="square"+(x==="FREE SPACE"?" free":"")+(player.marked_squares?.[i]?" marked":"");d.textContent=x;
+  d.onclick=()=>toggle(i);b.appendChild(d);
+ });
+}
+async function toggle(i){
+ player.marked_squares[i]=!player.marked_squares[i];
+ if(i===12)player.marked_squares[i]=true;
+ renderBoard();
+ await fetch(SUPABASE_URL+"/rest/v1/bingo_players?id=eq."+player.id,{method:"PATCH",headers:authHeaders(),body:JSON.stringify({marked_squares:player.marked_squares})});
+ checkBingo(false);
+}
+function hasBingo(a){
+ for(let r=0;r<5;r++){let ok=true;for(let c=0;c<5;c++)if(!a[r*5+c])ok=false;if(ok)return true}
+ for(let c=0;c<5;c++){let ok=true;for(let r=0;r<5;r++)if(!a[r*5+c])ok=false;if(ok)return true}
+ let ok=true;for(let i=0;i<5;i++)if(!a[i*5+i])ok=false;if(ok)return true;
+ ok=true;for(let i=0;i<5;i++)if(!a[i*5+(4-i)])ok=false;return ok;
+}
+function checkBingo(showMsg=true){if(hasBingo(player.marked_squares)){document.getElementById("bingo").textContent="🔎 JINKIES! BINGO! 🐾"; if(player.is_host) setWinner()} else if(showMsg)document.getElementById("bingo").textContent="👻 No Bingo yet — keep solving the mystery!";}
+async function setWinner(){if(room.winner_name)return;await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?id=eq."+room.id,{method:"PATCH",headers:authHeaders(),body:JSON.stringify({winner_name:player.player_name})})}
+async function nextClue(){
+ const called=Array.isArray(room.called_clues)?room.called_clues:[];const remaining=clues.filter(x=>!called.includes(x));if(!remaining.length)return;
+ const clue=remaining[Math.floor(Math.random()*remaining.length)], newCalled=[...called,clue];
+ await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?id=eq."+room.id,{method:"PATCH",headers:authHeaders(),body:JSON.stringify({current_clue:clue,called_clues:newCalled,game_started:true})});refresh();
+}
+async function resetRound(){
+ if(!confirm("Start a new round? Everyone's marks and called clues will be cleared."))return;
+ const ps=await (await fetch(SUPABASE_URL+"/rest/v1/bingo_players?room_id=eq."+room.id+"&select=id",{headers:authHeaders()})).json();
+ for(const p of ps)await fetch(SUPABASE_URL+"/rest/v1/bingo_players?id=eq."+p.id,{method:"PATCH",headers:authHeaders(),body:JSON.stringify({marked_squares:Array(25).fill(false)})});
+ await fetch(SUPABASE_URL+"/rest/v1/bingo_rooms?id=eq."+room.id,{method:"PATCH",headers:authHeaders(),body:JSON.stringify({current_clue:null,called_clues:[],winner_name:null,game_started:false})});refresh();
+}
+async function clearMarks(){player.marked_squares=Array(25).fill(false);player.marked_squares[12]=true;renderBoard();await fetch(SUPABASE_URL+"/rest/v1/bingo_players?id=eq."+player.id,{method:"PATCH",headers:authHeaders(),body:JSON.stringify({marked_squares:player.marked_squares})});}
+function leaveGame(){if(poll)clearInterval(poll);location.reload()}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+</script>
+<div class="footer-note">🐾 Zoinks! Keep your eyes peeled for clues! 🐾</div></body>
+</html>
